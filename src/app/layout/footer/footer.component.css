@@ -1,0 +1,22 @@
+footer {
+    height: 150px;
+    padding: 30px 15px 10px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+span {
+    background-color: var(--secondary);
+    border-radius: 5px;
+    color: var(--primary-light);
+    padding: 0px 10px;
+}
+
+.site-logo {
+    color: var(--primary-light);
+    font-size: 1.2rem;
+}
+
+.copy-right {
+    color: var(--text-color-light);
+}

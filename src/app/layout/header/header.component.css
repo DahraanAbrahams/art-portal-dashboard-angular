@@ -1,0 +1,29 @@
+header {
+    height: 120px;
+}
+
+span {
+    background-color: var(--secondary);
+    border-radius: 5px;
+    color: var(--primary-light);
+    padding: 0px 10px;
+}
+.site-logo {
+    color: var(--secondary);
+    font-size: 1.6rem;
+}
+
+.btn-color-primary-dark {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+}
+
+.btn-color-secondary {
+    color: var(--primary-light);
+    background-color: var(--secondary);
+}
+
+.user, a:link,  a:visited,  a:hover,  a:active {
+    text-decoration: none;
+    color: var(--primary-dark);
+}

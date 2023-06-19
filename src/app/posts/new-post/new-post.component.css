@@ -1,0 +1,29 @@
+.btn-color-primary-dark {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+}
+
+.btn-color-secondary {
+    color: var(--primary-light);
+    background-color: var(--secondary);
+}
+
+.img-preview {
+    height: 300px;
+}
+
+input::file-selector-button {
+    color: var(--primary-light);
+    background-color: var(--secondary);
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+input[type="file"]{
+    color: var(--text-color-light);
+    height:55px;
+    padding: 5px;
+}

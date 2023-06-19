@@ -1,0 +1,26 @@
+.form-control {
+    width: 100%;
+}
+
+.btn-color-primary-dark {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+}
+
+.btn-color-secondary {
+    color: var(--primary-light);
+    background-color: var(--secondary);
+}
+
+.heading-color {
+    color: var(--secondary);
+}
+
+.card {
+    border: none;
+}
+
+.edit-btn-color {
+    background-color: var(--secondary);
+    color: var(--primary-light);
+}

@@ -1,0 +1,13 @@
+p {
+    color: var(--text-color-light);
+}
+
+.card {
+    border: none;
+    height: 200px;
+    cursor: pointer;
+}
+
+.icon-color {
+    color: var(--secondary);
+}

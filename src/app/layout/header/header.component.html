@@ -1,0 +1,12 @@
+<header class="navbar navbar-expand-lg fixed-top bg-white drop-shadow-effect">
+
+    <div class="container-fluid">
+        <a class="site-logo" routerLink="/"> <span>ArtPortal</span> Dashboard </a>
+    </div>
+
+    <div class="container-fluid justify-content-end" *ngIf="isLoggedIn$ | async">
+        <a class="mr-3" href="#"> {{user}} </a>
+        <button class="btn btn-color-secondary" (click)="onLogOut()">Logout</button>
+    </div>
+
+</header>

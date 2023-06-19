@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "target": "artPortalDashboard",
+    "public": "dist/art-portal-dashboard",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
+}

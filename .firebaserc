@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "art-portal-b9108"
+  },
+  "targets": {
+    "art-portal-b9108": {
+      "hosting": {
+        "artPortalDashboard": [
+          "art-portal-b9108-dashboard"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

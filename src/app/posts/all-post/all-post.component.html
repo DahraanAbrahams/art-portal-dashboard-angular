@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card drop-shadow-effect">
+        <div class="card-body text-center">
+          <h3>All Blog Posts</h3>
+          <p>Manage your blog posts</p>
+
+          <div>
+            <button class="btn btn-color-secondary" routerLink="/posts/new">
+              New Post
+            </button>
+            <button class="btn btn-color-primary-dark ml-2" routerLink="/">
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card drop-shadow-effect">
+        <div class="card-body">
+          <table class="table row-border hover">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Summary</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let post of postArray">
+                <td width="200">
+                  <img
+                    src="{{ post.data.postImg }}"
+                    alt="{{ post.data.title }} image"
+                    class="img img-fluid"
+                  />
+                </td>
+                <td width="200">{{ post.data.title }}</td>
+                <td width="300">{{ post.data.summary }}</td>
+                <td>{{ post.data.category.category }}</td>
+                <td>{{ post.data.createdAt.toMillis() | date }}</td>
+                <td>
+                  <button
+                    class="btn edit-btn-color"
+                    routerLink="/posts/new"
+                    [queryParams]="{ id: post.id }"
+                  >
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center heading-color">{{formTitle}} Category</h3>
+      <p class="text-center mb-5">{{formSubTitle}}</p>
+
+      <form
+        class="form-inline text-center"
+        #categoryForm="ngForm"
+        (ngSubmit)="onSubmit(categoryForm)"
+      >
+        <div class="col-md-8">
+          <input
+            type="text"
+            name="category"
+            class="form-control drop-shadow-effect"
+            placeholder="Add New Category..."
+            #newCategory="ngModel" 
+            [(ngModel)]="formCategory"
+            ngModel
+            required
+            [ngClass] = " {'is-invalid': newCategory.touched && newCategory.invalid} "
+          />
+          <div class="alert alert-danger" *ngIf="newCategory.touched && newCategory.invalid">
+            Please Add a Category to the Field
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn btn-color-secondary ml-2 mr-2" [disabled]="categoryForm.invalid">{{formTitle}}</button>
+          <button class="btn btn-color-primary-dark" routerLink="/">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-5 mb-5">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card drop-shadow-effect">
+            <div class="card-body">
+                <table class="table row-border hover">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let category of categoryArray">
+                            <td> {{ category.data.category }} </td>
+                            <td> 
+                                <button class="btn edit-btn-color " (click)="onEdit(category.data.category, category.id )"> Edit </button>
+                                <button class="btn btn-color-primary-dark ml-2" (click)="onDelete(category.id )"> Delete </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+</div>
